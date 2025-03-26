@@ -32,7 +32,7 @@ jobs:
         java: [ 8, 11, 17 ]
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v1
+      - uses: actions/cache@v2.1.7
         with:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
@@ -55,7 +55,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/cache@v1
+      - uses: actions/cache@v2.1.7
         with:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
